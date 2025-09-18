@@ -3,7 +3,7 @@ from urllib.parse import urlparse, urljoin
 
 class LinksSpider(scrapy.Spider):
     name = "links"
-    allowed_domains = ["wikipedia.org"]
+    allowed_domains = []
     start_urls = []
 
     def __init__(self,start_url=None, allowed_domains = None,  max_pages = 10 ,*args, **kwargs):
@@ -46,3 +46,4 @@ class LinksSpider(scrapy.Spider):
 #scrapy crawl links -a start_url=https://en.wikipedia.org/wiki/Socompa -a allowed_domains=wikipedia.org
 #scrapy crawl links -a start_url=https://en.wikipedia.org/wiki/Socompa -a allowed_domains=nil
 #scrapy crawl links -a start_url=https://en.wikipedia.org/wiki/Socompa -a allowed_domains=wikipedia.org -a max_pages=5
+
